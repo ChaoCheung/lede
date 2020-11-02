@@ -1,4 +1,4 @@
-name: OpenWrt-CI
+name: Wndr4300
 on:
   push:
     branches: 
@@ -40,11 +40,10 @@ jobs:
         run: |
           rm -f ./.config*
           touch ./.config
-          # Wndr3800固件配置:
           cat >> .config <<EOF
           CONFIG_TARGET_ar71xx=y
-          CONFIG_TARGET_ar71xx_generic=y
-          CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3800=y
+          CONFIG_TARGET_ar71xx_nand=y
+          CONFIG_TARGET_ar71xx_nand_DEVICE_WNDR4300V1=y
           CONFIG_PACKAGE_ca-certificates=y
           CONFIG_PACKAGE_luci-app-accesscontrol=y
           CONFIG_PACKAGE_luci-app-adblock=y
