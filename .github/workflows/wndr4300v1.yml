@@ -2,9 +2,8 @@
 # This is free software, lisence use MIT.
 # 
 # Copyright (C) 2019 P3TERX <https://p3terx.com>
-# Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
-# 
-# <https://github.com/KFERMercer/OpenWrt-CI>
+# Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
+# Copyright (C) 2020 CC
 #
 
 name: wndr4300v1
@@ -110,43 +109,43 @@ jobs:
           CONFIG_TARGET_IMAGES_GZIP=y
           EOF
           # 编译UEFI固件:
-          cat >> .config <<EOF
-          CONFIG_EFI_IMAGES=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_EFI_IMAGES=y
+          # EOF
           # IPv6支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-          CONFIG_PACKAGE_ipv6helper=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+          # CONFIG_PACKAGE_ipv6helper=y
+          # EOF
           # 多文件系统支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_kmod-fs-nfs=y
-          CONFIG_PACKAGE_kmod-fs-nfs-common=y
-          CONFIG_PACKAGE_kmod-fs-nfs-v3=y
-          CONFIG_PACKAGE_kmod-fs-nfs-v4=y
-          CONFIG_PACKAGE_kmod-fs-ntfs=y
-          CONFIG_PACKAGE_kmod-fs-squashfs=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_kmod-fs-nfs=y
+          # CONFIG_PACKAGE_kmod-fs-nfs-common=y
+          # CONFIG_PACKAGE_kmod-fs-nfs-v3=y
+          # CONFIG_PACKAGE_kmod-fs-nfs-v4=y
+          # CONFIG_PACKAGE_kmod-fs-ntfs=y
+          # CONFIG_PACKAGE_kmod-fs-squashfs=y
+          # EOF
           # USB3.0支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_kmod-usb-ohci=y
-          CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-          CONFIG_PACKAGE_kmod-usb2=y
-          CONFIG_PACKAGE_kmod-usb2-pci=y
-          CONFIG_PACKAGE_kmod-usb3=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_kmod-usb-ohci=y
+          # CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+          # CONFIG_PACKAGE_kmod-usb2=y
+          # CONFIG_PACKAGE_kmod-usb2-pci=y
+          # CONFIG_PACKAGE_kmod-usb3=y
+          # EOF
           # 常用LuCI插件选择:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-baidupcs-web=y
-          CONFIG_PACKAGE_luci-app-docker=y
+          # CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          # CONFIG_PACKAGE_luci-app-aria2=y
+          # CONFIG_PACKAGE_luci-app-baidupcs-web=y
+          # CONFIG_PACKAGE_luci-app-docker=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-kodexplorer=y
           CONFIG_PACKAGE_luci-app-minidlna=y
-          CONFIG_PACKAGE_luci-app-openvpn=y
-          CONFIG_PACKAGE_luci-app-openvpn-server=y
+          # CONFIG_PACKAGE_luci-app-openvpn=y
+          # CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-qbittorrent=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
@@ -162,12 +161,12 @@ jobs:
           CONFIG_PACKAGE_luci-app-n2n_v2=y
           EOF
           # LuCI主题:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_luci-theme-argon=y
+          # CONFIG_PACKAGE_luci-theme-netgear=y
+          # EOF
           # 常用软件包:
-          cat >> .config <<EOF
+          # cat >> .config <<EOF
           CONFIG_PACKAGE_curl=y
           CONFIG_PACKAGE_htop=y
           CONFIG_PACKAGE_nano=y
